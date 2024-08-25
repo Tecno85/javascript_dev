@@ -17,17 +17,17 @@ let isStudent = false;
 
 // Undefined
 let undefineValue;
-console.log(undefineValue); // Variable declarada, pero no inicializada, no se le ha asignado un valor. 
+console.log(undefineValue); // Variable declarada, pero no inicializada, no se le ha asignado un valor.
 
 // Null
-let nullValue = null; // Variable creada con un valor asociado el cual es nulo. Es puesto directamente por el desarrollador. 
+let nullValue = null; // Variable creada con un valor asociado el cual es nulo. Es puesto directamente por el desarrollador.
 
 // Symbol: representan valores únicos que se utilizan como identificadores de propiedades para los objetos
 let mySymbol = Symbol("mysymbol");
 
 // BigInt: Son número enteros extremadamente grandes
 
-let myBigInt = BigInt(895739485730987659834756938475934563453453453453849);
+let myBigInt = BigInt(895739485730987659834756938475934563453453453453849n);
 let myBigInt2 = 895739485730987659834756938475934563453453453453849n;
 
 // Como saber a que tipo de datos pertenece una variable
@@ -49,4 +49,3 @@ console.log(typeof mySymbol);
 
 console.log(typeof myBigInt);
 console.log(typeof myBigInt2);
-
