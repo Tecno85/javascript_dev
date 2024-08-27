@@ -125,3 +125,13 @@ console.log(!(5 > 10 || 15 < 20)); // false
 const isRaining = true;
 
 isRaining ? console.log("Esta lloviendo") : console.log("No está lloviendo");
+
+// El Operador Ternario en JavaScript es una alternativa más compacta a las estructuras "if-else"
+
+// Sintaxis del Operador Ternario
+
+// condicón ? valorSiVerdadero : valorSiFalso;
+
+let food = true;
+
+food ? console.log("Dame, que tengo hambre") : console.log("me voy");
