@@ -126,16 +126,24 @@ console.log(resultado);
 
 // Dado un precio original y un booleano que indica si hay descuento, usa un operador ternario para aplicar un descuento del 20% si corresponde.
 
-let precio = 100;
-let descuento = false;
-let porcentejeDescuento = descuento
-  ? precio * 0.8
-  : `Precio igual: ${precio}, no aplica descuento`;
-console.log(porcentejeDescuento);
+let precioOriginal = 100;
+let hayDescuento = true;
 
-let precioOriginal = 100; // Este valor puede cambiarse
-let hayDescuento = true; // Este valor puede cambiarse
 let precioFinal = hayDescuento ? precioOriginal * 0.8 : precioOriginal;
 console.log(`El precio final es: ${precioFinal}`);
 
-// 10. Combina operadores aritméticos, de comparáción y lógicas
+// Dado un número, usa un operador ternario para determinar si el número es positivo, negativo o cero.
+
+let numero = a;
+let determinarNumero =
+  numero > 0 ? "positivo" : numero < 0 ? "Negativo" : "Cero";
+console.log(`El número es: ${determinarNumero}`);
+
+// 10. Combina operadores aritméticos, de comparáción y lógicos
+
+let u = 5 * 11;
+let p = 100 / 2;
+
+let comparacion = u == p ? `El número es: ${p}` : `El número es: ${u}`;
+console.log(comparacion) 
+
