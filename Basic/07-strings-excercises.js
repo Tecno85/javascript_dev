@@ -36,14 +36,23 @@ console.log(`El valor de a es: ${a}`);
 
 // 7. Reemplaza todos los espacios en blanco de un string por guiones
 
-let space = "Probando la función replace";
+let space = "Probando función replace";
 let spaceGuiones = space.replace(/ /g, "_");
-console.log(spaceGuiones); 
+console.log(spaceGuiones);
 
-// La expresión regular "/ /g", busca todosmlos espacios en blanco en la cadena. La opción "g"(global) asegura que todos los espacios sean reemplazados, no solo el primero. 
+// La expresión regular "/ /g", busca todos los espacios en blanco en la cadena. La opción "g"(global) asegura que todos los espacios sean reemplazados, no solo el primero.
 
 // 8. Comprueba si una cadena de texto contiene una palabra concreta
 
+console.log(space.includes("función"));
+console.log(space.includes("Madrid"));
+
 // 9. Comprueba si dos strings son iguales
 
+let perro = "Tony";
+let gato = "Tony";
+console.log(perro === gato);
+
 // 10. Comprueba si dos strings tienen la misma longitud
+
+console.log(perro.length == gato.length);
