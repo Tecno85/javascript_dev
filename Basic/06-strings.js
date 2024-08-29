@@ -1,5 +1,9 @@
 // Strings
 
+// Índice: Es la posición que identifica dónde está un elemento o carácter dentro de un arreglo o cadena.
+
+// Caracteres: Son los elementos individuales de una cadena de texto.
+
 // Concatenación
 
 // Concatenar: Es el proceso de unir dos o más "Strings"(cadenas de texto) o valores en una sola. Se hace usando el operador (+). Las varibles que contiene tipos númericos, son convertidas a tipo strings para ser concatenadas.
@@ -9,7 +13,7 @@ let greeting = "Hola, " + myName + "!";
 console.log(greeting);
 console.log(typeof greeting);
 
-// Longitud (Método Length)
+// Longitud (Método Length): Se utiliza para obtener la cantidad de caracteres en una cadena.
 
 console.log(greeting.length); // Da la longitud de la palabra "Hola"
 
@@ -46,3 +50,20 @@ console.log(message);
 
 let myNombre = "Ismael"
 console.log(`Hola, ${myNombre}!`);
+
+// Interpolación de variables y expresiones
+
+// La Interpolación es el proceso de insertar variables y expresiones directamente dentro de una cadena de texto. En los templates literals, esto se hace usando `${}`.
+
+let nombre = "Alice";
+let saludo = `Hola, ${nombre}!`;
+
+// Aquí, nombre es una variable, y la estamos interpolando dentro de la cadena.
+
+// Inclusión de expresiones
+
+// Se refiere a la capacidad de evaluar expresiones dentro de `${}` y luego incluir el resultado dentro de la cadena. 
+
+let a = 5;
+let b = 10;
+let suma = `La suma de 5 y 10 es ${a + b}.`;
