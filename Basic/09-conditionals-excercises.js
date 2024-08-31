@@ -56,35 +56,138 @@ console.log(edadFinal);
 
 // 6. Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes"
 
-let mes = 2;
-let estacion;
+let mes = 3;
 
 switch (mes) {
-  case 0:
-    estacion = "Invierno";
+  case 12:
+    console.log("Invierno");
     break;
   case 1:
-    estacion = "Verano";
+    console.log("Invierno");
     break;
   case 2:
-    estacion = "Primavera";
+    console.log("Invierno");
     break;
   case 3:
-    estacion = "otoño";
+    console.log("Primavera");
+    break;
+  case 4:
+    console.log("Primavera");
+    break;
+  case 5:
+    console.log("Primavera");
+    break;
+  case 6:
+    console.log("Verano");
+    break;
+  case 7:
+    console.log("Verano");
+    break;
+  case 8:
+    console.log("Verano");
+    break;
+  case 9:
+    console.log("Otoño");
+    break;
+  case 10:
+    console.log("Otoño");
+    break;
+  case 11:
+    console.log("Otoño");
     break;
 
   default:
-    console.log("Ingrese un valor entre 0 y 3");
+    console.log("Ingrese un número del 1 al 12.");
 }
-
-console.log(estacion);
 
 // 7. Muestra el número de días que tiene un mes dependiendo de la variable del ejercicio anterior
 
-// switch
+let month = "marzo";
+let dias;
+
+switch (month.toLowerCase()) {
+  case "febrero":
+    dias = 29;
+    break;
+  case "abril":
+  case "junio":
+  case "septiembre":
+  case "noviembre":
+    dias = 30;
+    break;
+  case "enero":
+  case "marzo":
+  case "mayo":
+  case "julio":
+  case "agosto":
+  case "octubre":
+  case "diciembre":
+    dias = 31;
+    break;
+
+  default:
+    console.log("El dato ingresado no corresponde a un mes del año");
+    dias = 0;
+}
+
+if (dias > 1) {
+  console.log(`El mes es ${month} y tiene ${dias} días.`);
+}
 
 // 8. Usa un switch para imprimir un mensaje de saludo diferente dependiendo del idioma
 
-// 9. Usa un switch para hacer de nuevo el ejercicio 6
+let language = "español";
+let saludo;
+
+switch (language.toLowerCase()) {
+  case "español":
+    saludo = "Hola, ¿como estás?";
+    break;
+  case "ingles":
+    saludo = "Hello, how are you?";
+    break;
+  case "frances":
+    saludo = "Salut, comment vas-tu?";
+    break;
+
+  default:
+    saludo = "Ingresa uno de estos idiomas: español, ingles o frances";
+}
+
+console.log(saludo);
+
+// 9. Usa un switch para hacer de nuevo el ejercicio 6 (Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes")
+
+let mesDelAño = 3;
+let season;
+
+switch (mesDelAño) {
+  case 3:
+  case 4:
+  case 5:
+    season = "Nos encontramos en 'Primavera'";
+    break;
+  case 6:
+  case 7:
+  case 8:
+    season = "Nos encontramos en 'Verano'";
+    break;
+  case 9:
+  case 10:
+  case 11:
+    season = "Nos encontramos en 'Otoño'";
+    break;
+  case 12:
+  case 1:
+  case 2:
+    season = "Nos encontramos en 'Invierno'";
+    break;
+
+  default:
+    season =
+      "Ingresa un número del 1 al 12, para ver a que estación corresponde.";
+}
+
+console.log(season);
 
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
