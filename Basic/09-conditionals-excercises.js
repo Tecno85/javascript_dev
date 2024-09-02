@@ -4,6 +4,16 @@ if/else/else if/ternaria
 
 // 1. Imprime por consola tu nombre si una variable toma su valor
 
+// Solución 1:
+
+let myNombre = "ivan";
+
+if(myNombre == "ivan"){
+    console.log(`Tu nombre es ${myName}.`);
+}
+
+// Solución 2: 
+
 let myName = "Ivan";
 let varMyName = myName;
 
@@ -191,3 +201,38 @@ switch (mesDelAño) {
 console.log(season);
 
 // 10. Usa un switch para hacer de nuevo el ejercicio 7
+
+let mesAño = "marzo";
+let diasAños;
+
+const diasPorMes = {
+  enero: 31,
+  febrero: 29,
+  marzo: 31,
+  abril: 30,
+  mayo: 31,
+  junio: 30,
+  julio: 31,
+  agosto: 31,
+  septiembre: 30,
+  octubre: 31,
+  noviembre: 30,
+  diciembre: 31,
+};
+
+diasAños = diasPorMes[month.toLowerCase()] || 0;
+
+if (diasAños === 0) {
+  console.log("El dato ingresado no corresponde a un mes del año");
+} else {
+  console.log(`El mes de ${mesAño} tiene ${diasAños} días.`);
+}
+
+/*
+Explicación:
+
+Usamos un objeto diasPorMes donde las claves son los nombres de los meses y los valores son la cantidad de días.
+Luego, obtenemos el número de días con diasPorMes[month.toLowerCase()].
+Si el mes ingresado no es válido, dias será 0, y mostramos un mensaje de error.
+Este enfoque es más conciso y facilita la adición de nuevos meses o cambios futuros.
+*/
