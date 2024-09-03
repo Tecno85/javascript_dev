@@ -8,11 +8,11 @@ if/else/else if/ternaria
 
 let myNombre = "ivan";
 
-if(myNombre == "ivan"){
-    console.log(`Tu nombre es ${myName}.`);
+if (myNombre == "ivan") {
+  console.log(`Tu nombre es ${myName}.`);
 }
 
-// Solución 2: 
+// Solución 2:
 
 let myName = "Ivan";
 let varMyName = myName;
@@ -38,6 +38,8 @@ if (user == "Ismael" && password == 855) {
 
 // 3. Verifica si un número es positivo, negativo o cero e imprime un mensaje
 
+// Solución 1:
+
 let number = 0;
 
 if (number == 0) {
@@ -47,6 +49,18 @@ if (number == 0) {
 } else {
   console.log("El número ingresado es negativo");
 }
+
+// Solución 2:
+
+let numero = -1;
+
+let verifiedNumero =
+  numero == 0
+    ? "EL número es Cero"
+    : numero < 0
+    ? "El número es negativo"
+    : "El número es positivo";
+console.log(verifiedNumero);
 
 // 4. Verifica si una persona puede votar o no (mayor o igual a 18) e indica cuántos años le faltan
 
@@ -61,7 +75,12 @@ if (edad >= 18) {
 
 // 5. Usa el operador ternario para asignar el valor "adulto" o "menor" a una variable dependiendo de la edad
 
-let edadFinal = edad >= 18 ? "Adulto" : "Menor";
+const adult = "Adulto";
+const minor = "Menor";
+
+let age = 13;
+
+let edadFinal = age >= 18 ? "Adulto" : "Menor";
 console.log(edadFinal);
 
 // 6. Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes"
@@ -166,7 +185,42 @@ switch (language.toLowerCase()) {
 
 console.log(saludo);
 
-// 9. Usa un switch para hacer de nuevo el ejercicio 6 (Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes")
+// 9. Usa un switch para hacer de nuevo el ejercicio 6 (Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes").
+
+// Solución 1:
+
+let monat = "MARZO";
+let zeit;
+
+switch (monat.toLowerCase()) {
+  case "marzo":
+  case "abril":
+  case "mayo":
+    zeit = "Primavera";
+    break;
+  case "junio":
+  case "julio":
+  case "agosto":
+    zeit = "Verano";
+    break;
+  case "septiembre":
+  case "octubre":
+  case "noviembre":
+    zeit = "Otoño";
+    break;
+  case "diciembre":
+  case "enero":
+  case "febrero":
+    zeit = "Invierno";
+    break;
+
+  default:
+    zeit = "Dato invalido, ingrese un mes del año";
+}
+
+console.log(`${zeit}.`);
+
+// Solución 2:
 
 let mesDelAño = 3;
 let season;
