@@ -32,46 +32,59 @@ let correcto =
     : "usuario y contraseña incorrectos";
 console.log(correcto);
 
-if (user == "Ismael" && password == 855) {
-  console.log("Usuario y contraseña correcta");
+// Solución 2:
+
+if (user == "Ismael" && password == 10052016) {
+  console.log("EL usuario y la contraseña son los correctos.");
 }
 
 // 3. Verifica si un número es positivo, negativo o cero e imprime un mensaje
 
 // Solución 1:
 
-let number = 0;
-
-if (number == 0) {
-  console.log(`El número ingresado es cero`);
-} else if (number > 0) {
-  console.log("El número ingresado es positivo");
-} else {
-  console.log("El número ingresado es negativo");
-}
-
-// Solución 2:
-
-let numero = -1;
+let numero = 0;
 
 let verifiedNumero =
   numero == 0
     ? "EL número es Cero"
     : numero < 0
-    ? "El número es negativo"
-    : "El número es positivo";
+    ? "El número es Negativo"
+    : "El número es Positivo";
 console.log(verifiedNumero);
+
+// Solución 2:
+
+if (numero == 0) {
+  console.log(`El numero es igual a Cero`);
+} else if (numero < 0) {
+  console.log(`El número es negativo`);
+} else {
+  console.log(`EL número es Positivo`);
+}
 
 // 4. Verifica si una persona puede votar o no (mayor o igual a 18) e indica cuántos años le faltan
 
-let edad = 18;
+// Solución 1:
 
-if (edad >= 18) {
-  console.log("Esta habilitado para votar");
+let ages = 18;
+
+if (ages >= 18) {
+  console.log(`Estas habilitado para votar`);
 } else {
-  let calculoEdad = 18 - edad;
-  console.log(`Le faltan ${calculoEdad} años para poder votar`);
+  let añosFaltantes = 18 - ages;
+  console.log(
+    `No está habilitado para votar, le faltan ${añosFaltantes} años.`
+  );
 }
+
+// Solución 2:
+
+let missingYears = 18 - age;
+let verificarVotación =
+  age >= 18
+    ? "Estas habilitado para votar"
+    : `No estas habilitado para votar, te falta ${missingYears} años.`;
+console.log(verificarVotación);
 
 // 5. Usa el operador ternario para asignar el valor "adulto" o "menor" a una variable dependiendo de la edad
 
@@ -128,64 +141,6 @@ switch (mes) {
   default:
     console.log("Ingrese un número del 1 al 12.");
 }
-
-// 7. Muestra el número de días que tiene un mes dependiendo de la variable del ejercicio anterior
-
-let month = "marzo";
-let dias;
-
-switch (month.toLowerCase()) {
-  case "febrero":
-    dias = 29;
-    break;
-  case "abril":
-  case "junio":
-  case "septiembre":
-  case "noviembre":
-    dias = 30;
-    break;
-  case "enero":
-  case "marzo":
-  case "mayo":
-  case "julio":
-  case "agosto":
-  case "octubre":
-  case "diciembre":
-    dias = 31;
-    break;
-
-  default:
-    console.log("El dato ingresado no corresponde a un mes del año");
-    dias = 0;
-}
-
-if (dias > 1) {
-  console.log(`El mes es ${month} y tiene ${dias} días.`);
-}
-
-// 8. Usa un switch para imprimir un mensaje de saludo diferente dependiendo del idioma
-
-let language = "español";
-let saludo;
-
-switch (language.toLowerCase()) {
-  case "español":
-    saludo = "Hola, ¿como estás?";
-    break;
-  case "ingles":
-    saludo = "Hello, how are you?";
-    break;
-  case "frances":
-    saludo = "Salut, comment vas-tu?";
-    break;
-
-  default:
-    saludo = "Ingresa uno de estos idiomas: español, ingles o frances";
-}
-
-console.log(saludo);
-
-// 9. Usa un switch para hacer de nuevo el ejercicio 6 (Muestra en que estación del año nos encontramos dependiendo del valor de una variable "mes").
 
 // Solución 1:
 
@@ -254,39 +209,91 @@ switch (mesDelAño) {
 
 console.log(season);
 
-// 10. Usa un switch para hacer de nuevo el ejercicio 7
+// 7. Muestra el número de días que tiene un mes dependiendo de la variable del ejercicio anterior
 
-let mesAño = "marzo";
-let diasAños;
+// Solucion 1:
 
-const diasPorMes = {
-  enero: 31,
-  febrero: 29,
-  marzo: 31,
-  abril: 30,
-  mayo: 31,
-  junio: 30,
-  julio: 31,
-  agosto: 31,
-  septiembre: 30,
-  octubre: 31,
-  noviembre: 30,
-  diciembre: 31,
-};
+let month = "febrero";
+let days;
 
-diasAños = diasPorMes[month.toLowerCase()] || 0;
+switch (month.toLowerCase()) {
+  case "febrero":
+    days = 29;
+    break;
+  case "abril":
+  case "junio":
+  case "septiembre":
+  case "noviembre":
+    days = 30;
+    break;
+  case "enero":
+  case "marzo":
+  case "mayo":
+  case "julio":
+  case "agosto":
+  case "octubre":
+  case "diciembre":
+    days = 31;
+    break;
 
-if (diasAños === 0) {
-  console.log("El dato ingresado no corresponde a un mes del año");
-} else {
-  console.log(`El mes de ${mesAño} tiene ${diasAños} días.`);
+  default:
+    console.log("Ingrese un mes del año");
+    days = 0;
 }
 
-/*
-Explicación:
+if (days > 0) {
+  console.log(`El mes ${month} tiene ${days} días.`);
+}
 
-Usamos un objeto diasPorMes donde las claves son los nombres de los meses y los valores son la cantidad de días.
-Luego, obtenemos el número de días con diasPorMes[month.toLowerCase()].
-Si el mes ingresado no es válido, dias será 0, y mostramos un mensaje de error.
-Este enfoque es más conciso y facilita la adición de nuevos meses o cambios futuros.
-*/
+// Solución 2:
+
+let meses = "abril";
+
+switch (meses.toLowerCase()) {
+  case "febrero":
+    console.log(`EL mes de ${meses} tiene 29 días`);
+    break;
+  case "abril":
+  case "junio":
+  case "septiembre":
+  case "noviembre":
+    console.log(`EL mes de ${meses} tiene 30 días`);
+    break;
+  case "enero":
+  case "marzo":
+  case "mayo":
+  case "julio":
+  case "agosto":
+  case "octubre":
+  case "diciembre":
+    console.log(`EL mes de ${meses} tiene 31 días`);
+    break;
+
+  default:
+    console.log("Ingresa un mes del año");
+}
+
+// 8. Usa un switch para imprimir un mensaje de saludo diferente dependiendo del idioma
+
+let lenguage = "Aleman";
+let saludo;
+
+switch (lenguage.toLowerCase()) {
+  case "español":
+    saludo = "Hola, este es un saludo en Español";
+    break;
+  case "ingles":
+    saludo = "Hello, this is a greeting in English";
+    break;
+  case "frances":
+    saludo = "Bonjour, ceci est une salutation en francais";
+    break;
+  case "aleman":
+    saludo = "Hallo, hier ist ein grub auf Deutsch";
+    break;
+
+  default:
+    saludo = "Ingresa uno de estos idiomas: Español, Ingles, Frances o Aleman";
+}
+
+console.log(saludo);
